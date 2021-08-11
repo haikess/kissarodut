@@ -1,0 +1,127 @@
+body {
+    font-family: 'Dosis', sans-serif; /* fontti */
+    background-color: rgb(150, 206, 128); /* url("../images/image9.jpg"); */
+    background-size: 100%;
+    position: relative;
+    padding-top: 90px; /* navigoinnin ja karusellin väliin jäävä tila */
+}
+
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+@media (min-width: 420px) {
+    h1 {font-size: 36px;}
+    .carousel-caption {display: none;} /* karusellikuvien päällä olevat tekstit ei näy */
+}
+
+@media (min-width: 800px) {
+    h1 {font-size: 56px;}
+}
+
+nav {
+    background-color: rgb(229, 153, 153);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:rgb(64, 88, 244);
+    font-size: 24px;
+}
+
+@media (max-width: 500px) {
+    #osa3 {display:none;} /*piilotetaan osio3, kun sivu alle 500px*/
+ }
+
+.container {background-color: rgba(195, 252, 235, 0.5);
+            width: 80%;
+            margin: auto;
+ }
+
+/* brandin ja tekstin väri */
+.grt-menu .grt-logo {
+    color: rgba(241,135,187, 0.8);
+}
+
+/* linkin väri */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgb(161, 224, 89);
+}
+
+/* aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: rgb(255, 224, 206);
+}
+
+.nav-item .dropdown-menu a:hover {
+    color: white !important;
+    background: rgb(255, 224, 206) !important;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    z-index: 1;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-color: rgb(247, 178, 237) !important;
+}
+
+.nav-link.active {
+    color: white !important; /* !important kumoaa mahdolliset muut värit */
+}
+
+.jumbotron {
+    background-color: rgb(227, 253, 221);
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.ravintolakuva { /* grid:issä olevien kuvien muokkaus */
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+    padding-bottom: 10px;
+    border-radius: 15px 50px; /* reunojen pyöristys */
+}
+
+.leivos1 { /* vegaaninen suklaakakku -kuva */
+    width: 60px;
+}
+
+.leivos2 { /* vegaaninen mangokakku -kuva */
+    width: 60px;
+}
+
+.leivos3 { /* passionhedelmäleivos-kuva */
+    width: 60px;
+}
+
+.card-link { /* jälkiruokatekstien ulkoasun muokkaus */
+    text-decoration: none;
+    color: rgb(247, 178, 139);
+}
+
+/* Lista: */
+.ui-selected {
+    background: rgb(236, 127, 54);
+    color: white;
+   }
+.ui-widget { 
+    font-size: 1.2em; 
+    font-family: 'Catamaran', sans-serif;
+   }
+.ui-widget-header { 
+    border: 5px solid gray; 
+    background: rgba(238, 157, 37, 0.9); 
+    color: white;
+   }
+.ui-widget-content { 
+    border: 2px solid green; 
+    background: rgba(241,135,187, 0.8); 
+    color: gray;
+   } /* lista päättyy */

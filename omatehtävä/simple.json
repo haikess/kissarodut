@@ -1,0 +1,9 @@
+{
+    "html": {
+        "head": "Tämä on head osio",
+        "body": "Tämä on body osio"
+    },
+    "lista": ["yksi", "kaksi", "kolme"],
+    "muu": "joku",
+    "kolmas": "joku toinen"
+}
