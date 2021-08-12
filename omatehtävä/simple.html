@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 
 <head>
     <!-- merkistö määritys, jotta ääkköset toimivat -->
@@ -44,7 +44,7 @@
     <!--liittäisi tälle sivulle js-kansiosta tuommosen
     js-tiedoston mukaan-->
 
-   <!-- toggler, lisäominaisuus: --> 
+    <!-- toggler, lisäominaisuus: -->
     <style>
         .toggler {
             width: 400px;
@@ -78,7 +78,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- toggler, lisäominaisuus: --> 
+    <!-- toggler, lisäominaisuus: -->
     <script>
         $(function () {
             var state = true;
@@ -101,14 +101,14 @@
         });
     </script>
     <!-- lomakkeiden ja listan script: -->
-    <script type="text/javascript">
+    <script>
 
         function kissanvideointilomake() {
             var name = document.getElementById("name").value;
             var sposti = document.getElementById("sposti").value;
             var erityistoiveet = document.getElementById("erityistoiveet").value;
             document.getElementById("poytavaraus").innerHTML = "Kiitos varauksesta " + name + "<br>Sähköpostisoitteesi: " + sposti + "<br>Erityistoiveet: " + erityistoiveet
-            + " pyritään ottamaan huomioon.";
+                + " pyritään ottamaan huomioon.";
         }
 
         function palautelomake() {
@@ -140,7 +140,7 @@
 
             // yhdistää taulukon solut alert:tiin
             //alert(taulukko.join(" "));
-            alert(customerName.value + " " + customerEmail.value + " " + taulukko.join(" ")); 
+            alert(customerName.value + " " + customerEmail.value + " " + taulukko.join(" "));
         }
         $(document).ready(function () { // Lista
             showSelectable();
@@ -205,7 +205,9 @@
                             <a class="nav-link" href="#palaute">Palaute</a>
                         </li>
                     </ul>
+                    </div>
             </nav>
+        </header>
     </div>
 
     <!-- jumbotron: -->
@@ -218,7 +220,7 @@
                     <img src="images/kisuvihrtaustal.JPG" alt="kisuvihrtaustal" class="kisuvihrtaustal">
                 </div>
                 <div class="col-sm-4">Kissarotujen esittelyä napakasti kuvien kera.<br><br> Lisätietoa
-                    kissaliitto.fi</b>
+                    kissaliitto.fi
                 </div>
                 <div class="col-sm-4">
                     <img src="images/kisuvihreeltaustal.JPG" alt="kisuvihreeltaustal" class="kisuvihreeltaustal">
@@ -461,106 +463,104 @@
     </div>
 
     <div class="lomakkeet">
-    <!-- Kissavideovarauslomake -->
-    <form id="kissanvideointilomake" onsubmit="return false">
-        <h3>Kissanvideointi-varauslomake:</h3>
-        <p>Varaa aika kissasi videointiin!</p>
-        <label for="name">Nimi:</label><br>
-        <input type="text" id="name" name="name" required><br>
+        <!-- Kissavideovarauslomake -->
+        <form id="kissanvideointilomake" onsubmit="return false">
+            <h3>Kissanvideointi-varauslomake:</h3>
+            <p>Varaa aika kissasi videointiin!</p>
+            <label for="name">Nimi:</label><br>
+            <input type="text" id="name" name="name" required><br>
 
-        <label for="sposti">Sähköposti:</label><br>
-        <input type="email" id="sposti" name="sposti" required><br>
+            <label for="sposti">Sähköposti:</label><br>
+            <input type="email" id="sposti" name="sposti" required><br>
 
-        <label for="tel">Puhelinnumero:</label><br>
-        <input type="tel" id="tel" name="tel" placeholder="0501234567" pattern="[0-9]{10}"><br>
+            <label for="tel">Puhelinnumero:</label><br>
+            <input type="tel" id="tel" name="tel" placeholder="0501234567" pattern="[0-9]{10}"><br>
 
-        <label for="date">Varauspäivä:</label><br>
-        <input type="date" id="date" name="date" required><br>
+            <label for="date">Varauspäivä:</label><br>
+            <input type="date" id="date" name="date" required><br>
 
-        <label for="varausAlkaa">Varaus alkaa:</label><br>
-        <input type="number" id="varausAlkaa" name="varausAlkaa" required><br>
+            <label for="varausAlkaa">Varaus alkaa:</label><br>
+            <input type="number" id="varausAlkaa" name="varausAlkaa" required><br>
 
-        <label for="erityistoiveet">Erityistoiveet:</label><br>
-        <input type="text" id="erityistoiveet" name="erityistoiveet"><br>
+            <label for="erityistoiveet">Erityistoiveet:</label><br>
+            <input type="text" id="erityistoiveet" name="erityistoiveet"><br>
 
-        <label for="submit"></label><br>
-        <input type="submit" class="Tallenna" value="Tallenna" id="submit" name="submit"
-            onclick="kissanvideointilomake()"><br>
-    </form>
+            <label for="submit"></label><br>
+            <input type="submit" class="Tallenna" value="Tallenna" id="submit" name="submit"
+                onclick="kissanvideointilomake()"><br>
+        </form>
 
-    <div id="poytavaraus">
-        <!-- tämän id:hen viitataan scriptissä -->
+        <div id="poytavaraus">
+            <!-- tämän id:hen viitataan scriptissä -->
+        </div>
+
+        <form id="palautelomake">
+            <br>
+            <h3>Palautelomake</h3>
+
+            <!-- Palautelomake -->
+            <label for="customerName">Nimi:</label><br>
+            <input type="text" id="customerName" name="customerName" required><br>
+
+            <label for="customerEmail">Sähköposti:</label><br>
+            <input type="email" id="customerEmail" name="customerEmail" required><br>
+            <br>
+            <!-- monivalinta yhdellä vastauksella -->
+            <p>Olivatko kissat söpöjä kuvissa?</p>
+            <label>
+                <input type="radio" name="kissasopoys" value="kyllä">
+                Kyllä oli
+            </label><br>
+            <label>
+                <input type="radio" name="kissasopoys" value="ei">
+                Ei ollut
+            </label><br>
+            <label>
+                <input type="radio" name="kissasopoys" value="jotenkuten">
+                Jotenkuten
+            </label>
+
+            <!-- monivalinta yhdestä moneen vastauksella -->
+            <p>Mikä kissarotu olisi hyvä lisä? (voit valita useamman)</p>
+            <label>
+                <input type="checkbox" name="rotulisays" value="laperm"> Laperm
+            </label><br>
+            <label>
+                <input type="checkbox" name="rotulisays" value="bengali"> Bengali
+            </label><br>
+            <label>
+                <input type="checkbox" name="rotulisays" value="sokoke"> Sokoke
+            </label><br>
+
+            <!-- alasvetovalikosta valinta -->
+
+            <label for="lempirotusi">Mikä oli lempirotusi?:</label>
+            <select name="lempirotusi" id="lempirotusi">
+                <option value="egyptinmau">Egyptinmau</option>
+                <option value="eurooppalainen">Eurooppalainen</option>
+                <option value="balinees">Balinees</option>
+                <option value="mainecoon">Maine Coon</option>
+                <option value="norjalainenmetsakisu">Norjalainen metsäkisu</option>
+                <option value="persialainen">Persialainen</option>
+                <option value="ragdoll">Ragdoll</option>
+                <option value="americancurl">American Curl, pitkäkarva</option>
+                <option value="nevamasquerade">Neva Masquerade</option>
+                <option value="pyhabirma">Pyhä Birma</option>
+                <option value="siperiankissa">Siperian kissa</option>
+            </select>
+            <br>
+            <label for="submit"></label><br>
+            <input type="submit" class="Tallenna" value="Tallenna" name="submit" onclick="palautelomake()"><br>
+
+        </form>
     </div>
 
-    <form id="palautelomake">
-        <br>
-        <h3>Palautelomake</h3>
-
-        <!-- Palautelomake -->
-        <label for="customerName">Nimi:</label><br>
-        <input type="text" id="customerName" name="customerName" required><br>
-
-        <label for="customerEmail">Sähköposti:</label><br>
-        <input type="email" id="customerEmail" name="customerEmail" required><br>
-        <br>
-        <!-- monivalinta yhdellä vastauksella -->
-        <p>Olivatko kissat söpöjä kuvissa?</p>
-        <label>
-            <input type="radio" name="kissasopoys" value="kyllä">
-            Kyllä oli
-        </label><br>
-        <label>
-            <input type="radio" name="kissasopoys" value="ei">
-            Ei ollut
-        </label><br>
-        <label>
-            <input type="radio" name="kissasopoys" value="jotenkuten">
-            Jotenkuten
-        </label>
-
-        <!-- monivalinta yhdestä moneen vastauksella -->
-        <p>Mikä kissarotu olisi hyvä lisä? (voit valita useamman)</p>
-        <label>
-            <input type="checkbox" name="rotulisays" value="laperm"> Laperm
-        </label><br>
-        <label>
-            <input type="checkbox" name="rotulisays" value="bengali"> Bengali
-        </label><br>
-        <label>
-            <input type="checkbox" name="rotulisays" value="sokoke"> Sokoke
-        </label><br>
-
-        <!-- alasvetovalikosta valinta -->
-
-        <label for="lempirotusi">Mikä oli lempirotusi?:</label>
-        <select name="lempirotusi" id="lempirotusi">
-            <option value="egyptinmau">Egyptinmau</option>
-            <option value="eurooppalainen">Eurooppalainen</option>
-            <option value="balinees">Balinees</option>
-            <option value="mainecoon">Maine Coon</option>
-            <option value="norjalainenmetsakisu">Norjalainen metsäkisu</option>
-            <option value="persialainen">Persialainen</option>
-            <option value="ragdoll">Ragdoll</option>
-            <option value="americancurl">American Curl, pitkäkarva</option>
-            <option value="nevamasquerade">Neva Masquerade</option>
-            <option value="pyhabirma">Pyhä Birma</option>
-            <option value="siperiankissa">Siperian kissa</option>
-        </select>
-        <br>
-        <label for="submit"></label><br>
-        <input type="submit" class="Tallenna" value="Tallenna" name="submit" onclick="palautelomake()"><br>
-
-    </form>
-</div>
-    </header>
-
-    <article>
-
-    </article>
+    <!-- <article>
+    </article> -->
 
     <footer>
         <br>
-        <!-- toggler, lisäominaisuus: --> 
+        <!-- toggler, lisäominaisuus: -->
         <div class="toggler">
             <div id="effect" class="ui-widget-content ui-corner-all">
                 <h3 class="ui-widget-header ui-corner-all">Kissarodut</h3>
@@ -572,7 +572,6 @@
 
         <button id="button" class="ui-state-default ui-corner-all">Muuta laatikon kokoa klikkaamalla tästä</button>
     </footer>
-    </div>
 </body>
 
 </html>
