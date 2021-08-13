@@ -30,9 +30,6 @@ nav {
     font-size: 24px;
 }
 
-@media (max-width: 500px) {
-    #osa3 {display:none;} /*piilotetaan osio3, kun sivu alle 500px*/
- }
 
 .container {background-color: rgba(195, 252, 235, 0.5);
             width: 80%;
@@ -52,11 +49,11 @@ nav {
 /* aktiivisen & hover-linkin väri */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: rgb(255, 224, 206);
+    color: rgb(206, 227, 255);
 }
 
 .nav-item .dropdown-menu a:hover {
-    color: white !important;
+    color: rgb(90, 240, 177) !important;
     background: rgb(255, 224, 206) !important;
     cursor: pointer;
 }
@@ -70,7 +67,7 @@ nav {
 }
 
 .nav-link.active {
-    color: white !important; /* !important kumoaa mahdolliset muut värit */
+    color: rgb(53, 28, 194) !important; /* !important kumoaa mahdolliset muut värit */
 }
 
 .jumbotron {
